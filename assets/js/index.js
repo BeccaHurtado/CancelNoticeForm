@@ -12,7 +12,18 @@ function getCancelNoticePDF() {
     let element = document.createElement('div');
     element.innerHTML =
 
-    '<h1 class="text-center"> Cancel Request </h1>';
+    '<div class="container pt-4"><h1 class="text-center"> Cancel Request</h1>' +
+    '<div text-left>' + date + '</div>' +
+    '<div>' + policyNumber + '</div>' +
+    '<div>' + policyNumber + '</div>' +
+    '<div>' + firstName + middleName + lastName + '</div>' +
+    '<div><p>I no longer need coverage. Please return any premium to the following address.</div>' +
+    '<div>' + streetAddress + '</div>' +
+    '<div>' + city + ', ' + state + zip + '</div>' +
+    '<div>' + firstName + middleName + lastName + ' _____________________</div>' +
+    '</div>'
+    
+    ;
 
     html2pdf().from(element).save('cancel_notice.pdf');
 }
