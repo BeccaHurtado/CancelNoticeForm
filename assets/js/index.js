@@ -3,9 +3,10 @@ function getCancelNoticePDF() {
 
     let element = document.createElement('div');
     element.innerHTML =
+    
     '<h1> Cancel Request </h1>' + date;
 
-    htm12pdf().from(element).save('cancel_notice.pdf');
+    html2pdf().from(element).save('cancel_notice.pdf');
 }
 
 document.getElementById('generatepdf').addEventListener('click', getCancelNoticePDF)
