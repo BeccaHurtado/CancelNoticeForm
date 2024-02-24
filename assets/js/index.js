@@ -1,10 +1,18 @@
 function getCancelNoticePDF() {
     let date = document.getElementById('dateInput').value;
+    let policyNumber = document.getElementById('policyNumberInput').value;
+    let firstName = document.getElementById('firstNameInput').value;
+    let middleName = document.getElementById('middleNameInput').value;
+    let lastName = document.getElementById('lastNameInput').value;
+    let streetAddress = document.getElementById('streetInput').vlaue;
+    let city = document.getElementById('cityInput').value;
+    let state = document.getElementById('stateInput').value;
+    let zip = document.getElementById('zipInput').value;
 
     let element = document.createElement('div');
     element.innerHTML =
-    
-    '<h1> Cancel Request </h1>' + date;
+
+    '<h1 class="text-center"> Cancel Request </h1>';
 
     html2pdf().from(element).save('cancel_notice.pdf');
 }
