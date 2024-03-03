@@ -26,6 +26,8 @@
 
 <body class="bg-primary-subtle">
 
+    <button class="openButton" onclick="openForm()">Click to start a cancel request</button>
+
     <form action="" class="cancel-form p-4 row g-3" id="cancel-form">
 
         <!-- date input area -->
@@ -88,6 +90,13 @@
                 <option value="Louisiana">LA</option>
                 <option value="Maine">ME</option>
                 <option value="Maryland">MD</option>
+                <option value="Massachusetts">MA</option>
+                <option value="Michigan">MI</option>
+                <option value="Minnesota">MN</option>
+                <option value="Mississippi">MS</option>
+                <option value="Missouri">MO</option>
+                <option value="Montana">MT</option>
+                <option value="Nebraska">NE</option>
             </select>
         </div>
         <div class="col-md-4">
@@ -95,7 +104,8 @@
             <input type="text" id="zipInput" name="zipInput" class="form-control" placeholder="e.g Mesa">
         </div>
         <div class="d-grid gap-2 col-6 mx-auto pt-4">
-            <input type="button" class="btn btn-primary" value="Generate PDF" id="generatepdf" onclick="getCancelNoticePDF()">
+            <input type="button" class="btn btn-primary" value="Generate PDF" id="generatepdf">
+            <button type="button" class="btn cancel btn-warning" onclick="closeForm()">Close Form</button>
         </div>
     </form>
 
