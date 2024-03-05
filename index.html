@@ -13,104 +13,163 @@
 </head>
 
 <main class="text-center">
-    <div class="p-2 page-title bg-primary text-white text-uppercase">
-        <h2>Cancel Notice Generator</h1>
-    </div>
-
-    <div class="page-description bg-white p-1">
-        <h6>
-         Fill in the information to receive a cancellation request document.
-        </h5>
-    </div>           
+    <div class="p-2 page-title text-white text-uppercase">
+        <h2>Quick Generators</h1>
+    </div>          
 </main>
 
-<body class="bg-primary-subtle">
+<!-- tabs start here -->
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="simple-tab-0" data-bs-toggle="tab" href="#simple-tabpanel-0" role="tab" aria-selected="true" aria-controls="simple-tabpanel-0">Cancel Request</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="simple-tab-1" data-bs-toggle="tab" href="#simple-tabpanel-1" role="tab" aria-controls="simple-tabpanel-1" aria-selected="false">Commissions</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+  </ul>
+<!-- end of tabs-->
 
-    <button class="openButton" onclick="openForm()">Click to start a cancel request</button>
+<body class="">
 
-    <form action="" class="cancel-form p-4 row g-3" id="cancel-form">
+    <!-- Tab content starts here -->
+    <div class="tab-content pt-5" id="tab-content">
 
-        <!-- date input area -->
-        <div class="form-elem">
-            <label for="dateInput" class="form-label">Date</label>
-            <input id="dateInput" name="dateInput" type="date" class="form-control">
+        <!-- cancel request tab-->
+        <div class="tab-pane active" id="simple-tabpanel-0" role="tabpanel" aria-labelledby="simple-tab-0">
+            
+            <div class="container">
+                <div class="form-body">
+                    <div class="row">
+                        <div class="form-holder">
+                            <div class="form-content">
+                                <div class="form-items">
+                                    <h3 class="text-center">Create a Cancel Request</h3>
+                                    <p class="text-center">Fill in the information below.</p>
+    
+                                    <form class="cancel-form p-4 row g-3 rounded inputField" id="cancel-form">
+    
+                                        <!-- date input area -->
+                                        <div class="form-elem">
+                                            <label for="dateInput" class="form-label">Date</label>
+                                            <input id="dateInput" name="dateInput" type="date" class="form-control">
+                                        </div>
+                                        
+                                        <!-- policy number input area-->
+                                        <div class="form-elem pt-1">
+                                            <label for="policyNumberInput" class="form-label">Policy Number</label>
+                                            <input type="text" class="form-control" id="policyNumberInput" placeholder="e.g. 123456789">
+                                        </div>
+                                
+                                        <!-- name input area-->
+                                        <div class="form-elem pt-2 col-md-4">
+                                            <label for="firstNameInput" class="form-label">First Name</label>
+                                            <input name="firstNameInput"  id="firstNameInput" class="form-control" placeholder="Jane">
+                                        </div>
+                                        <div class="form-elem pt-2 col-md-4">
+                                            <label for="middleNameInput" class="form-label">Middle Name</label>
+                                            <input name="middleNameInput"  id="middleNameInput" class="form-control" placeholder="Smith">
+                                        </div>
+                                        <div class="form-elem pt-2 col-md-4">
+                                            <label for="lastNameInput" class="form-label">Last Name</label>
+                                            <input name="lastNameInput"  id="lastNameInput" class="form-control" placeholder="Doe">
+                                        </div>
+                                        
+                                        <!-- address input area-->
+                                        <div class="form-elem pt-2">
+                                            <label for="streetInput" class="form-label">Street Address</label>
+                                            <input type="text" id="streetInput" name="streetInput" class="form-control" placeholder="e.g. 123 S Road Dr">
+                                        </div>
+                                        <div class="form-elem col-md-6">
+                                            <label for="cityInput" class="form-label">City</label>
+                                            <input type="text" id="cityInput" name="cityInput" class="form-control" placeholder="e.g Mesa">
+                                        </div>
+                                        <div class="form-elem col-md-2">
+                                            <label for="stateInput" class="form-label">State/Province</label>
+                                            <select name="stateInout" id="stateInput" class="form-select" aria-label="Default select example">
+                                                <option selected>Choose...</option>
+                                                <option value="Alabama">AL</option>
+                                                <option value="Alaska">AK</option>
+                                                <option value="Arizona">AZ</option>
+                                                <option value="Arkansas">AR</option>
+                                                <option value="california">CA</option>
+                                                <option value="Colorado">CO</option>
+                                                <option value="Connecticut">CT</option>
+                                                <option value="Delaware">DE</option>
+                                                <option value="FL">FL</option>
+                                                <option value="Georgia">GA</option>
+                                                <option value="Guam">GU</option>
+                                                <option value="Hawaii">HI</option>
+                                                <option value="Idaho">ID</option>
+                                                <option value="Illinois">IL</option>
+                                                <option value="Indiana">IN</option>
+                                                <option value="Iowa">IA</option>
+                                                <option value="Kansaa">KS</option>
+                                                <option value="Kentucky">KY</option>
+                                                <option value="Louisiana">LA</option>
+                                                <option value="Maine">ME</option>
+                                                <option value="Maryland">MD</option>
+                                                <option value="Massachusetts">MA</option>
+                                                <option value="Michigan">MI</option>
+                                                <option value="Minnesota">MN</option>
+                                                <option value="Mississippi">MS</option>
+                                                <option value="Missouri">MO</option>
+                                                <option value="Montana">MT</option>
+                                                <option value="Nebraska">NE</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-elem col-md-4">
+                                            <label for="zipInput" class="form-label">Zip/Postal Code</label>
+                                            <input type="number" id="zipInput" name="zipInput" class="form-control" placeholder="e.g 85123">
+                                        </div>
+                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                            <input type="button" class="btn generate rounded" value="Generate PDF" id="generatepdf">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
         </div>
-        
-        <!-- policy number input area-->
-        <div class="pt-1">
-            <label for="policyNumberInput" class="form-label">Policy Number</label>
-            <input type="text" class="form-control" id="policyNumberInput" placeholder="e.g. 123456789">
-        </div>
+        <!-- cancel request tab end-->
 
-        <!-- name input area-->
-        <div class="pt-2 col-md-4">
-            <label for="firstNameInput" class="form-label">First Name</label>
-            <input name="firstNameInput"  id="firstNameInput" class="form-control" placeholder="Jane">
+        <!-- commission central tab-->
+        <div class="tab-pane" id="simple-tabpanel-1" role="tabpanel" aria-labelledby="simple-tab-1">
+            <div class="container">
+                <div class="text-center">
+                    <h3>Commission Center</h3>
+                    <p>Fill in the information to receive the commission earned</p>
+                </div>
+                
+                <form>
+                    <div class="">
+                        <label for="">Carrier</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this menu</option>
+                            <option value="American Access">American Access</option>
+                            <option value="Commonwealth">Commonwealth</option>
+                            <option value="Progressive">Progressive</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="">Payments Made</label>
+                        <input type="number" class="form-control" placeholder="e.g. 120">
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="pt-2 col-md-4">
-            <label for="middleNameInput" class="form-label">Middle Name</label>
-            <input name="middleNameInput"  id="middleNameInput" class="form-control" placeholder="Smith">
-        </div>
-        <div class="pt-2 col-md-4">
-            <label for="lastNameInput" class="form-label">Last Name</label>
-            <input name="lastNameInput"  id="lastNameInput" class="form-control" placeholder="Doe">
-        </div>
-        
-        <!-- address input area-->
-        <div class="pt-2">
-            <label for="streetInput" class="form-label">Street Address</label>
-            <input type="text" id="streetInput" name="streetInput" class="form-control" placeholder="e.g. 123 S Road Dr">
-        </div>
-        <div class="col-md-6">
-            <label for="cityInput" class="form-label">City</label>
-            <input type="text" id="cityInput" name="cityInput" class="form-control" placeholder="e.g Mesa">
-        </div>
-        <div class="col-md-2">
-            <label for="stateInput" class="form-label">State/Province</label>
-            <select name="stateInout" id="stateInput" class="form-select" aria-label="Default select example">
-                <option selected>Choose...</option>
-                <option value="Alabama">AL</option>
-                <option value="Alaska">AK</option>
-                <option value="Arizona">AZ</option>
-                <option value="Arkansas">AR</option>
-                <option value="california">CA</option>
-                <option value="Colorado">CO</option>
-                <option value="Connecticut">CT</option>
-                <option value="Delaware">DE</option>
-                <option value="FL">FL</option>
-                <option value="Georgia">GA</option>
-                <option value="Guam">GU</option>
-                <option value="Hawaii">HI</option>
-                <option value="Idaho">ID</option>
-                <option value="Illinois">IL</option>
-                <option value="Indiana">IN</option>
-                <option value="Iowa">IA</option>
-                <option value="Kansaa">KS</option>
-                <option value="Kentucky">KY</option>
-                <option value="Louisiana">LA</option>
-                <option value="Maine">ME</option>
-                <option value="Maryland">MD</option>
-                <option value="Massachusetts">MA</option>
-                <option value="Michigan">MI</option>
-                <option value="Minnesota">MN</option>
-                <option value="Mississippi">MS</option>
-                <option value="Missouri">MO</option>
-                <option value="Montana">MT</option>
-                <option value="Nebraska">NE</option>
-            </select>
-        </div>
-        <div class="col-md-4">
-            <label for="zipInput" class="form-label">Zip/Postal Code</label>
-            <input type="text" id="zipInput" name="zipInput" class="form-control" placeholder="e.g Mesa">
-        </div>
-        <div class="d-grid gap-2 col-6 mx-auto pt-4">
-            <input type="button" class="btn btn-primary" value="Generate PDF" id="generatepdf">
-            <button type="button" class="btn cancel btn-warning" onclick="closeForm()">Close Form</button>
-        </div>
-    </form>
+    </div>
+
+    
+    
 
     <footer>
-        
+        <div class="pt-4 text-center text-uppercase footer">Created for Estrella Insurance</div>
     </footer>
     
 </body>
